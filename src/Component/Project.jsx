@@ -1,6 +1,9 @@
 import React from "react";
 import img1 from "../Image/Capture.PNG";
 import img2 from "../Image/Capture1.PNG";
+import img3 from "../Image/Capture2.PNG";
+import img4 from "../Image/Capture3.PNG";
+
 export default function Project() {
   const projects = [
     {
@@ -30,7 +33,7 @@ export default function Project() {
       description:
         "A modern e-commerce website built with Next.js with a responsive and user-friendly shopping experience.",
       tech: ["Next.js", "React.js", "Tailwind CSS"],
-      image: "",
+      image: img3,
       github: "https://github.com/riyajpatel-dev/NextjsMaybell",
       live: "#",
     },
@@ -39,8 +42,9 @@ export default function Project() {
       description:
         "A responsive HR management portal built to streamline employee management and HR operations with a clean and user-friendly interface.",
       tech: ["React.js", "JavaScript", "CSS", "Material UI"],
+      image: img4,
       github: "https://github.com/riyajpatel-dev/AdminPanel",
-      live: "#",
+      live: "admin-panel-9j5s.vercel.app",
     },
   ];
   return (
