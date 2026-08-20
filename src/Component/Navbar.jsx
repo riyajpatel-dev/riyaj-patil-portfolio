@@ -7,53 +7,54 @@ export default function Navbar() {
     <>
       <nav
         className="
-        fixed top-3 left-1/2 z-50
-        w-[calc(100%-16px)] sm:w-[calc(100%-24px)] md:w-[calc(100%-40px)]
-        max-w-7xl
-        -translate-x-1/2
-        rounded-2xl
-        border border-white/10
-        bg-[#171a2b]/90
-        px-2 sm:px-4 md:px-6 lg:px-8
-        shadow-lg
-        backdrop-blur-md
-      "
+    fixed top-3 left-1/2 z-50
+    w-[calc(100%-16px)] sm:w-[calc(100%-24px)] md:w-[calc(100%-40px)]
+    max-w-7xl
+    -translate-x-1/2
+    rounded-2xl
+    border border-white/10
+    bg-[#171a2b]/90
+    px-2 sm:px-4 md:px-6 lg:px-8
+    shadow-lg
+    backdrop-blur-md
+  "
       >
         <div className="flex min-h-16 items-center justify-center py-2">
           {/* LOGO */}
-          <span className="shrink-0 text-base sm:text-lg font-bold tracking-wide text-white">
+          <span className="shrink-0 text-base font-bold tracking-wide text-white sm:text-lg">
             Port<span className="text-yellow-400">folio</span>
           </span>
 
           <div
             className="
-            flex min-w-0 flex-1 items-center justify-center
-            gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12
-            overflow-visible
-          "
+        flex min-w-0 flex-1 items-center justify-center
+        gap-2 xs:gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-12
+        overflow-visible
+      "
           >
             {/* ================= HOME ================= */}
             <a
               href="#home"
               onClick={() => setActiveDropdown(null)}
               className="
-              group relative shrink-0 py-2
-              text-[8px] xs:text-[9px] sm:text-xs md:text-sm
-              font-semibold tracking-wide
-              text-gray-300 transition duration-300
-              hover:text-white whitespace-nowrap
-            "
+          group relative shrink-0 py-2
+          whitespace-nowrap
+          text-[8px] font-semibold tracking-wide
+          text-gray-300 transition duration-300
+          hover:text-white
+          xs:text-[9px] sm:text-xs md:text-sm
+        "
             >
               HOME
               <span
                 className="
-                absolute bottom-0 left-1/2
-                h-[2px] w-0
-                -translate-x-1/2
-                rounded-full bg-yellow-400
-                transition-all duration-300
-                group-hover:w-5
-              "
+            absolute bottom-0 left-1/2
+            h-[2px] w-0
+            -translate-x-1/2
+            rounded-full bg-yellow-400
+            transition-all duration-300
+            group-hover:w-5
+          "
               />
             </a>
 
@@ -65,61 +66,66 @@ export default function Navbar() {
                   setActiveDropdown(activeDropdown === "about" ? null : "about")
                 }
                 className="
-                group relative py-2
-                text-[8px] xs:text-[9px] sm:text-xs md:text-sm
-                font-semibold tracking-wide
-                text-gray-300 transition duration-300
-                hover:text-white whitespace-nowrap
-              "
+            group relative py-2
+            whitespace-nowrap
+            text-[8px] font-semibold tracking-wide
+            text-gray-300 transition duration-300
+            hover:text-white
+            xs:text-[9px] sm:text-xs md:text-sm
+          "
               >
                 ABOUT
                 <span
                   className={`
-                  absolute bottom-0 left-1/2
-                  h-[2px]
-                  -translate-x-1/2
-                  rounded-full bg-yellow-400
-                  transition-all duration-300
-                  ${activeDropdown === "about" ? "w-5" : "w-0 group-hover:w-5"}
-                `}
+              absolute bottom-0 left-1/2
+              h-[2px]
+              -translate-x-1/2
+              rounded-full bg-yellow-400
+              transition-all duration-300
+              ${activeDropdown === "about" ? "w-5" : "w-0 group-hover:w-5"}
+            `}
                 />
               </button>
 
               {/* ABOUT DROPDOWN */}
               <div
                 className={`
-                absolute left-1/2 top-full mt-4
-                w-[calc(100vw-24px)] sm:w-[calc(100vw-32px)]
-                max-w-[420px]
-                -translate-x-1/2
-                rounded-2xl border border-white/10
-                bg-[#111827]/95
-                p-4 sm:p-6
-                shadow-2xl
-                backdrop-blur-xl
-                transition-all duration-300
-                ${
-                  activeDropdown === "about"
-                    ? "visible translate-y-0 opacity-100"
-                    : "invisible translate-y-3 opacity-0 pointer-events-none"
-                }
-              `}
+            fixed
+            left-1/2
+            top-[80px]
+            z-[60]
+            w-[calc(100vw-24px)]
+            max-w-[420px]
+            -translate-x-1/2
+            rounded-2xl
+            border border-white/10
+            bg-[#111827]/95
+            p-4 sm:p-6
+            shadow-2xl
+            backdrop-blur-xl
+            transition-all duration-300
+            ${
+              activeDropdown === "about"
+                ? "visible translate-y-0 opacity-100"
+                : "invisible translate-y-3 opacity-0 pointer-events-none"
+            }
+          `}
               >
                 <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-yellow-400">
                   About Me
                 </p>
 
-                <h2 className="mb-3 text-lg sm:text-xl font-bold text-white">
+                <h2 className="mb-3 text-lg font-bold text-white sm:text-xl">
                   I'm Riyaj Patil
                 </h2>
 
-                <p className="text-xs sm:text-sm leading-6 text-gray-300">
+                <p className="text-xs leading-6 text-gray-300 sm:text-sm">
                   I am a Front-End Developer with approximately three years of
                   professional experience, specializing in React.js, Next.js,
                   Tailwind CSS, and modern UI development.
                 </p>
 
-                <p className="mt-3 text-xs sm:text-sm leading-6 text-gray-400">
+                <p className="mt-3 text-xs leading-6 text-gray-400 sm:text-sm">
                   I focus on building scalable, responsive and high-performance
                   web interfaces with clean and user-friendly experiences.
                 </p>
@@ -136,52 +142,57 @@ export default function Navbar() {
                   )
                 }
                 className="
-                group relative py-2
-                text-[8px] xs:text-[9px] sm:text-xs md:text-sm
-                font-semibold tracking-wide
-                text-gray-300 transition duration-300
-                hover:text-white whitespace-nowrap
-              "
+            group relative py-2
+            whitespace-nowrap
+            text-[8px] font-semibold tracking-wide
+            text-gray-300 transition duration-300
+            hover:text-white
+            xs:text-[9px] sm:text-xs md:text-sm
+          "
               >
                 SKILLS
                 <span
                   className={`
-                  absolute bottom-0 left-1/2
-                  h-[2px]
-                  -translate-x-1/2
-                  rounded-full bg-yellow-400
-                  transition-all duration-300
-                  ${activeDropdown === "skills" ? "w-5" : "w-0 group-hover:w-5"}
-                `}
+              absolute bottom-0 left-1/2
+              h-[2px]
+              -translate-x-1/2
+              rounded-full bg-yellow-400
+              transition-all duration-300
+              ${activeDropdown === "skills" ? "w-5" : "w-0 group-hover:w-5"}
+            `}
                 />
               </button>
 
               {/* SKILLS DROPDOWN */}
               <div
                 className={`
-                absolute left-1/2 top-full mt-4
-                w-[calc(100vw-24px)] sm:w-[calc(100vw-32px)]
-                max-w-[520px]
-                -translate-x-1/2
-                rounded-2xl border border-white/10
-                bg-[#111827]/95
-                p-4 sm:p-6
-                shadow-2xl
-                backdrop-blur-xl
-                transition-all duration-300
-                ${
-                  activeDropdown === "skills"
-                    ? "visible translate-y-0 opacity-100"
-                    : "invisible translate-y-3 opacity-0 pointer-events-none"
-                }
-              `}
+            fixed
+            left-1/2
+            top-[80px]
+            z-[60]
+            w-[calc(100vw-24px)]
+            max-w-[520px]
+            -translate-x-1/2
+            rounded-2xl
+            border border-white/10
+            bg-[#111827]/95
+            p-4 sm:p-6
+            shadow-2xl
+            backdrop-blur-xl
+            transition-all duration-300
+            ${
+              activeDropdown === "skills"
+                ? "visible translate-y-0 opacity-100"
+                : "invisible translate-y-3 opacity-0 pointer-events-none"
+            }
+          `}
               >
                 <div className="mb-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yellow-400">
                     My Expertise
                   </p>
 
-                  <h2 className="mt-1 text-lg sm:text-xl font-bold text-white">
+                  <h2 className="mt-1 text-lg font-bold text-white sm:text-xl">
                     Technical Skill Set
                   </h2>
                 </div>
@@ -207,14 +218,14 @@ export default function Navbar() {
                         <span
                           key={skill}
                           className="
-                          rounded-lg border border-white/10
-                          bg-white/5 px-2.5 py-1.5
-                          text-xs text-gray-300
-                          transition-all duration-300
-                          hover:border-yellow-400/40
-                          hover:bg-yellow-400/10
-                          hover:text-yellow-300
-                        "
+                      rounded-lg border border-white/10
+                      bg-white/5 px-2.5 py-1.5
+                      text-xs text-gray-300
+                      transition-all duration-300
+                      hover:border-yellow-400/40
+                      hover:bg-yellow-400/10
+                      hover:text-yellow-300
+                    "
                         >
                           {skill}
                         </span>
@@ -238,14 +249,14 @@ export default function Navbar() {
                         <span
                           key={skill}
                           className="
-                          rounded-lg border border-white/10
-                          bg-white/5 px-2.5 py-1.5
-                          text-xs text-gray-300
-                          transition-all duration-300
-                          hover:border-yellow-400/40
-                          hover:bg-yellow-400/10
-                          hover:text-yellow-300
-                        "
+                      rounded-lg border border-white/10
+                      bg-white/5 px-2.5 py-1.5
+                      text-xs text-gray-300
+                      transition-all duration-300
+                      hover:border-yellow-400/40
+                      hover:bg-yellow-400/10
+                      hover:text-yellow-300
+                    "
                         >
                           {skill}
                         </span>
@@ -264,14 +275,14 @@ export default function Navbar() {
                         <span
                           key={skill}
                           className="
-                          rounded-lg border border-white/10
-                          bg-white/5 px-2.5 py-1.5
-                          text-xs text-gray-300
-                          transition-all duration-300
-                          hover:border-yellow-400/40
-                          hover:bg-yellow-400/10
-                          hover:text-yellow-300
-                        "
+                      rounded-lg border border-white/10
+                      bg-white/5 px-2.5 py-1.5
+                      text-xs text-gray-300
+                      transition-all duration-300
+                      hover:border-yellow-400/40
+                      hover:bg-yellow-400/10
+                      hover:text-yellow-300
+                    "
                         >
                           {skill}
                         </span>
@@ -291,14 +302,14 @@ export default function Navbar() {
                           <span
                             key={skill}
                             className="
-                            rounded-lg border border-white/10
-                            bg-white/5 px-2.5 py-1.5
-                            text-xs text-gray-300
-                            transition-all duration-300
-                            hover:border-yellow-400/40
-                            hover:bg-yellow-400/10
-                            hover:text-yellow-300
-                          "
+                        rounded-lg border border-white/10
+                        bg-white/5 px-2.5 py-1.5
+                        text-xs text-gray-300
+                        transition-all duration-300
+                        hover:border-yellow-400/40
+                        hover:bg-yellow-400/10
+                        hover:text-yellow-300
+                      "
                           >
                             {skill}
                           </span>
@@ -325,14 +336,14 @@ export default function Navbar() {
                         <span
                           key={skill}
                           className="
-                          rounded-lg border border-white/10
-                          bg-white/5 px-2.5 py-1.5
-                          text-xs text-gray-300
-                          transition-all duration-300
-                          hover:border-yellow-400/40
-                          hover:bg-yellow-400/10
-                          hover:text-yellow-300
-                        "
+                      rounded-lg border border-white/10
+                      bg-white/5 px-2.5 py-1.5
+                      text-xs text-gray-300
+                      transition-all duration-300
+                      hover:border-yellow-400/40
+                      hover:bg-yellow-400/10
+                      hover:text-yellow-300
+                    "
                         >
                           {skill}
                         </span>
@@ -348,24 +359,25 @@ export default function Navbar() {
               href="#projects"
               onClick={() => setActiveDropdown(null)}
               className="
-              group relative inline-flex shrink-0 items-center
-              py-2
-              text-[8px] xs:text-[9px] sm:text-xs md:text-sm
-              font-semibold tracking-wide
-              text-gray-300 transition duration-300
-              hover:text-white whitespace-nowrap
-            "
+          group relative inline-flex shrink-0 items-center
+          py-2
+          whitespace-nowrap
+          text-[8px] font-semibold tracking-wide
+          text-gray-300 transition duration-300
+          hover:text-white
+          xs:text-[9px] sm:text-xs md:text-sm
+        "
             >
               PROJECTS
               <span
                 className="
-                absolute bottom-0 left-1/2
-                h-[2px] w-0
-                -translate-x-1/2
-                rounded-full bg-yellow-400
-                transition-all duration-300
-                group-hover:w-5
-              "
+            absolute bottom-0 left-1/2
+            h-[2px] w-0
+            -translate-x-1/2
+            rounded-full bg-yellow-400
+            transition-all duration-300
+            group-hover:w-5
+          "
               />
             </a>
 
@@ -379,57 +391,57 @@ export default function Navbar() {
                   )
                 }
                 className="
-                group relative py-2
-                text-[8px] xs:text-[9px] sm:text-xs md:text-sm
-                font-semibold tracking-wide
-                text-gray-300 transition duration-300
-                hover:text-white whitespace-nowrap
-              "
+            group relative py-2
+            whitespace-nowrap
+            text-[8px] font-semibold tracking-wide
+            text-gray-300 transition duration-300
+            hover:text-white
+            xs:text-[9px] sm:text-xs md:text-sm
+          "
               >
                 EXPERIENCE
                 <span
                   className={`
-                  absolute bottom-0 left-1/2
-                  h-[2px]
-                  -translate-x-1/2
-                  rounded-full bg-yellow-400
-                  transition-all duration-300
-                  ${
-                    activeDropdown === "experience"
-                      ? "w-5"
-                      : "w-0 group-hover:w-5"
-                  }
-                `}
+              absolute bottom-0 left-1/2
+              h-[2px]
+              -translate-x-1/2
+              rounded-full bg-yellow-400
+              transition-all duration-300
+              ${activeDropdown === "experience" ? "w-5" : "w-0 group-hover:w-5"}
+            `}
                 />
               </button>
 
               {/* EXPERIENCE DROPDOWN */}
               <div
                 className={`
-                absolute right-0 sm:left-1/2 sm:right-auto top-full mt-4
-                w-[calc(100vw-24px)] sm:w-[calc(100vw-32px)]
-                max-w-[560px]
-                sm:-translate-x-1/2
-                translate-y-3
-                rounded-2xl border border-white/10
-                bg-[#111827]/95
-                p-4 sm:p-6
-                shadow-2xl
-                backdrop-blur-xl
-                transition-all duration-300
-                ${
-                  activeDropdown === "experience"
-                    ? "visible translate-y-0 opacity-100"
-                    : "invisible translate-y-3 opacity-0 pointer-events-none"
-                }
-              `}
+            fixed
+            left-1/2
+            top-[80px]
+            z-[60]
+            w-[calc(100vw-24px)]
+            max-w-[560px]
+            -translate-x-1/2
+            rounded-2xl
+            border border-white/10
+            bg-[#111827]/95
+            p-4 sm:p-6
+            shadow-2xl
+            backdrop-blur-xl
+            transition-all duration-300
+            ${
+              activeDropdown === "experience"
+                ? "visible translate-y-0 opacity-100"
+                : "invisible translate-y-3 opacity-0 pointer-events-none"
+            }
+          `}
               >
                 <div className="mb-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yellow-400">
                     Professional Journey
                   </p>
 
-                  <h2 className="mt-1 text-lg sm:text-xl font-bold text-white">
+                  <h2 className="mt-1 text-lg font-bold text-white sm:text-xl">
                     3+ Years of Experience
                   </h2>
                 </div>
@@ -439,11 +451,11 @@ export default function Navbar() {
                   <div className="relative border-l border-yellow-400/30 pl-5">
                     <span
                       className="
-                      absolute -left-[5px] top-1.5
-                      h-2.5 w-2.5 rounded-full
-                      bg-yellow-400
-                      shadow-[0_0_10px_rgba(250,204,21,0.7)]
-                    "
+                  absolute -left-[5px] top-1.5
+                  h-2.5 w-2.5 rounded-full
+                  bg-yellow-400
+                  shadow-[0_0_10px_rgba(250,204,21,0.7)]
+                "
                     />
 
                     <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
@@ -473,11 +485,11 @@ export default function Navbar() {
                   <div className="relative border-l border-yellow-400/30 pl-5">
                     <span
                       className="
-                      absolute -left-[5px] top-1.5
-                      h-2.5 w-2.5 rounded-full
-                      bg-yellow-400
-                      shadow-[0_0_10px_rgba(250,204,21,0.7)]
-                    "
+                  absolute -left-[5px] top-1.5
+                  h-2.5 w-2.5 rounded-full
+                  bg-yellow-400
+                  shadow-[0_0_10px_rgba(250,204,21,0.7)]
+                "
                     />
 
                     <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
@@ -507,11 +519,11 @@ export default function Navbar() {
                   <div className="relative border-l border-yellow-400/30 pl-5">
                     <span
                       className="
-                      absolute -left-[5px] top-1.5
-                      h-2.5 w-2.5 rounded-full
-                      bg-yellow-400
-                      shadow-[0_0_10px_rgba(250,204,21,0.7)]
-                    "
+                  absolute -left-[5px] top-1.5
+                  h-2.5 w-2.5 rounded-full
+                  bg-yellow-400
+                  shadow-[0_0_10px_rgba(250,204,21,0.7)]
+                "
                     />
 
                     <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
@@ -538,7 +550,6 @@ export default function Navbar() {
                   </div>
                 </div>
 
-                {/* Summary */}
                 <div className="mt-5 rounded-xl border border-yellow-400/10 bg-yellow-400/5 px-4 py-3">
                   <p className="text-xs leading-5 text-gray-300">
                     <span className="font-semibold text-yellow-300">
@@ -561,77 +572,80 @@ export default function Navbar() {
                   )
                 }
                 className="
-                group relative inline-flex items-center gap-1
-                overflow-hidden rounded-full
-                border border-yellow-400/50
-                bg-purple-500
-                px-2 py-1.5
-                sm:px-3.5
-                text-[8px] xs:text-[9px] sm:text-xs
-                font-bold tracking-wide
-                text-white
-                shadow-[0_0_20px_rgba(168,85,247,0.25)]
-                transition-all duration-300
-                hover:-translate-y-1
-                hover:border-yellow-300
-                hover:bg-yellow-400
-                hover:text-[#111827]
-                hover:shadow-[0_0_25px_rgba(250,204,21,0.45)]
-                whitespace-nowrap
-              "
+            group relative inline-flex items-center gap-1
+            overflow-hidden rounded-full
+            border border-yellow-400/50
+            bg-purple-500
+            px-2 py-1.5
+            whitespace-nowrap
+            text-[8px] font-bold tracking-wide text-white
+            shadow-[0_0_20px_rgba(168,85,247,0.25)]
+            transition-all duration-300
+            hover:-translate-y-1
+            hover:border-yellow-300
+            hover:bg-yellow-400
+            hover:text-[#111827]
+            hover:shadow-[0_0_25px_rgba(250,204,21,0.45)]
+            xs:text-[9px] sm:px-3.5 sm:text-xs
+          "
               >
                 <span className="relative z-10">CONTACT</span>
 
                 <span
                   className="
-                  relative z-10 text-[10px] sm:text-sm
-                  transition-transform duration-300
-                  group-hover:translate-x-1
-                "
+              relative z-10 text-[10px]
+              transition-transform duration-300
+              group-hover:translate-x-1
+              sm:text-sm
+            "
                 >
                   →
                 </span>
 
                 <span
                   className="
-                  absolute inset-0
-                  -translate-x-full
-                  bg-gradient-to-r
-                  from-transparent
-                  via-white/40
-                  to-transparent
-                  transition-transform duration-700
-                  group-hover:translate-x-full
-                "
+              absolute inset-0
+              -translate-x-full
+              bg-gradient-to-r
+              from-transparent
+              via-white/40
+              to-transparent
+              transition-transform duration-700
+              group-hover:translate-x-full
+            "
                 />
               </button>
 
               {/* CONTACT DROPDOWN */}
               <div
                 className={`
-                absolute right-0 top-full mt-4
-                w-[calc(100vw-24px)] sm:w-[calc(100vw-32px)]
-                max-w-[380px]
-                translate-y-3
-                rounded-2xl border border-white/10
-                bg-[#111827]/95
-                p-4 sm:p-5
-                shadow-2xl
-                backdrop-blur-xl
-                transition-all duration-300
-                ${
-                  activeDropdown === "contact"
-                    ? "visible translate-y-0 opacity-100"
-                    : "invisible translate-y-3 opacity-0 pointer-events-none"
-                }
-              `}
+            fixed
+            left-1/2
+            top-[80px]
+            z-[60]
+            w-[calc(100vw-24px)]
+            max-w-[380px]
+            -translate-x-1/2
+            rounded-2xl
+            border border-white/10
+            bg-[#111827]/95
+            p-4 sm:p-5
+            shadow-2xl
+            backdrop-blur-xl
+            transition-all duration-300
+            ${
+              activeDropdown === "contact"
+                ? "visible translate-y-0 opacity-100"
+                : "invisible translate-y-3 opacity-0 pointer-events-none"
+            }
+          `}
               >
                 <div className="mb-5">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-yellow-400">
                     Get In Touch
                   </p>
 
-                  <h2 className="mt-1 text-lg sm:text-xl font-bold text-white">
+                  <h2 className="mt-1 text-lg font-bold text-white sm:text-xl">
                     Let's Work Together
                   </h2>
 
@@ -646,14 +660,14 @@ export default function Navbar() {
                   <a
                     href="tel:+919923505129"
                     className="
-                    flex items-center gap-3
-                    rounded-xl border border-white/10
-                    bg-white/5 p-3
-                    transition-all duration-300
-                    hover:-translate-y-0.5
-                    hover:border-yellow-400/30
-                    hover:bg-yellow-400/10
-                  "
+                flex items-center gap-3
+                rounded-xl border border-white/10
+                bg-white/5 p-3
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:border-yellow-400/30
+                hover:bg-yellow-400/10
+              "
                   >
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-green-500/10 text-lg">
                       📞
@@ -674,14 +688,14 @@ export default function Navbar() {
                   <a
                     href="mailto:riyajpatel54@gmail.com"
                     className="
-                    flex items-center gap-3
-                    rounded-xl border border-white/10
-                    bg-white/5 p-3
-                    transition-all duration-300
-                    hover:-translate-y-0.5
-                    hover:border-yellow-400/30
-                    hover:bg-yellow-400/10
-                  "
+                flex items-center gap-3
+                rounded-xl border border-white/10
+                bg-white/5 p-3
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:border-yellow-400/30
+                hover:bg-yellow-400/10
+              "
                   >
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-yellow-400/10 text-lg">
                       ✉
@@ -704,14 +718,14 @@ export default function Navbar() {
                     target="_blank"
                     rel="noreferrer"
                     className="
-                    flex items-center gap-3
-                    rounded-xl border border-white/10
-                    bg-white/5 p-3
-                    transition-all duration-300
-                    hover:-translate-y-0.5
-                    hover:border-yellow-400/30
-                    hover:bg-yellow-400/10
-                  "
+                flex items-center gap-3
+                rounded-xl border border-white/10
+                bg-white/5 p-3
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:border-yellow-400/30
+                hover:bg-yellow-400/10
+              "
                   >
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-sm font-bold text-blue-400">
                       in
@@ -734,14 +748,14 @@ export default function Navbar() {
                     target="_blank"
                     rel="noreferrer"
                     className="
-                    flex items-center gap-3
-                    rounded-xl border border-white/10
-                    bg-white/5 p-3
-                    transition-all duration-300
-                    hover:-translate-y-0.5
-                    hover:border-yellow-400/30
-                    hover:bg-yellow-400/10
-                  "
+                flex items-center gap-3
+                rounded-xl border border-white/10
+                bg-white/5 p-3
+                transition-all duration-300
+                hover:-translate-y-0.5
+                hover:border-yellow-400/30
+                hover:bg-yellow-400/10
+              "
                   >
                     <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/10 text-sm font-bold text-white">
                       GH
@@ -759,7 +773,6 @@ export default function Navbar() {
                   </a>
                 </div>
 
-                {/* Bottom CTA */}
                 <div className="mt-4 rounded-xl border border-yellow-400/10 bg-yellow-400/5 px-4 py-3">
                   <p className="text-xs leading-5 text-gray-300">
                     <span className="font-semibold text-yellow-300">
